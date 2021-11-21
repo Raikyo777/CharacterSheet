@@ -1,0 +1,27 @@
+.table {
+    border-collapse: collapse;
+    /* Убираем двойные линии между ячейками */
+    width: 1600px;
+    /* Ширина таблицы */
+    border: 3px black solid;
+    font-size: 20px;
+}
+
+.tr {
+    background: rgb(184, 206, 219);
+    text-align: right;
+}
+
+.caption {
+    background: rgb(0, 255, 13);
+    text-align: center;
+    border: 3px black solid;
+}
+
+.td {
+    text-align: center;
+    border: 1px solid black;
+    /* Параметры рамки */
+    padding: 4px;
+    /* Поля вокруг текста */
+}

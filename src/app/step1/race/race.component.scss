@@ -1,0 +1,76 @@
+/* таблица стилей */
+
+
+/* задаем размер страницы */
+
+#page {
+    width: 1650px;
+    height: 100% auto;
+}
+
+
+/* задаем размещение блоков */
+
+#logo {
+    float: left;
+    width: 1630px;
+    height: 150px;
+    //background: #FDE2CC;
+    margin: 10px;
+}
+
+#menu {
+    float: left;
+    width: 290px;
+    height: 250px;
+    //background: #EEB6B6;
+    margin: 10px;
+}
+
+#content {
+    float: right;
+    width: 1300px;
+    height: 800px;
+    //background: #B9BBF1;
+    margin: 10px;
+}
+
+.raceInfo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    margin: 20px;
+    float: left;
+    &.img {
+        float: left;
+        width: 300px;
+        height: auto;
+    }
+    &.text {
+        float: right;
+        width: 820px;
+        height: auto;
+        &.remark {
+            font-style: italic;
+            font-size: 12px;
+        }
+    }
+}
+
+.race {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.name {
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    margin: 10px;
+}
+
+.halfelfStat {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    margin: 10px;
+}

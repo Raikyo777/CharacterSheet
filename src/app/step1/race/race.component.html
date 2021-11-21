@@ -1,0 +1,58 @@
+<div id="page">
+    <div id="logo">
+        <p>Выбран {{raceChoose}} по имени {{name}} {{surname}}</p>
+    </div>
+    <div id="menu">
+        <div class="name">
+            <h2>Имя:</h2><input type="text" (input)="name = $event.target.value; _data.getName(name);" [value]="name">
+            <h2>Фамилия/Клан/Прозвище:</h2><input type="text" (input)="surname = $event.target.value; _data.getSurname(surname);" [value]="surname">
+        </div>
+        <div>
+            <select name="race" id="raceSelect" class="race" [(ngModel)]='raceChoose' (change)='clickRace(raceChoose)'>
+                <option *ngFor = "let race of raceSel"  >{{race}}</option>
+            </select>
+            <app-subrace *ngIf='subraceVisible' [subraceSel]="subraceSel"></app-subrace>
+            <div>
+                <select *ngIf='halfelfStatVisible' [(ngModel)]='stat1' class="halfelfStat" (change)='clickhalfelfStat()'>
+                    <option *ngFor = "let stat of stats"  >{{stat}}</option>
+                </select>
+                <select *ngIf='halfelfStatVisible' [(ngModel)]='stat2' class="halfelfStat" (change)='clickhalfelfStat()'>
+                    <option *ngFor = "let stat of stats"  >{{stat}}</option>
+                </select>
+            </div>
+
+        </div>
+        <app-gender (send)='genderSend($event)'></app-gender>
+
+    </div>
+    <div id="content">
+        <dir class='raceInfo'>
+            <img [src]="imgPath" alt="Тут картинка расы" class='raceInfo img'>
+            <p class='raceInfo text remark'>{{raceInfo.remark}}</p>
+            <div class='raceInfo text'>
+                <p><input type="checkbox" [(ngModel)]="titleEn"> Заголовок</p>
+                <p [hidden]="!titleEn">{{raceInfo.title}}</p>
+            </div>
+            <div class='raceInfo text'>
+                <p><input type="checkbox" [(ngModel)]="descrEn"> Описание</p>
+                <p [hidden]="!descrEn">{{raceInfo.description}}</p>
+            </div>
+            <div class='raceInfo text'>
+                <p><input type="checkbox" [(ngModel)]="lifeEn"> Жизнь</p>
+                <p [hidden]="!lifeEn">{{raceInfo.life}}</p>
+            </div>
+            <div class='raceInfo text'>
+                <p><input type="checkbox" [(ngModel)]="namesEn"> Имена</p>
+                <p [hidden]="!namesEn">{{raceInfo.names}}</p>
+            </div>
+            <div class='raceInfo text'>
+                <p><input type="checkbox" [(ngModel)]="charEn"> Особенности</p>
+                <p [hidden]="!charEn">{{raceInfo.char}}</p>
+            </div>
+
+
+        </dir>
+
+
+    </div>
+</div>

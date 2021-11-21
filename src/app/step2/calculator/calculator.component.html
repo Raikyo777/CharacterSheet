@@ -1,0 +1,82 @@
+<div>
+    <table class='table'>
+        <tr class='caption'>
+            <td class='td'>Атрибут</td>
+            <td class='td'>Сырое Значение характеристики</td>
+            <td class='td'>Расовые бонусы</td>
+            <td class='td'>Результирующее значение характеристики</td>
+            <td class='td'>Результирующий модификатор</td>
+            <td class='td'>Очков потрачено</td>
+        </tr>
+        <tr>
+            <td class='td'>Сила</td>
+            <td class='td'>
+                <select name="abil_score" id="abil_score" [(ngModel)]='raw.str' (change)='calcStrChange()'>
+                  <option *ngFor = 'let num of startAttr '[ngValue]='num '>{{num}}</option>
+                </select>
+            </td>
+            <td class='td '>{{raceBonus.str}}</td>
+            <td class='td '>{{total.str}}</td>
+            <td class='td '>{{mods.str}}</td>
+            <td class='td '>{{points.str}}</td>
+        </tr>
+        <tr>
+            <td class='td '>Ловкость</td>
+            <td class='td '><select name="abil_score" id="abil_score" [(ngModel)]='raw.dex ' (change)='calcDexChange()'>
+                <option *ngFor = 'let num of startAttr '[ngValue]='num '>{{num}}</option>
+              </select>
+            </td>
+            <td class='td '>{{raceBonus.dex}}</td>
+            <td class='td '>{{total.dex}}</td>
+            <td class='td '>{{mods.dex}}</td>
+            <td class='td '>{{points.dex}}</td>
+        </tr>
+        <tr>
+            <td class='td '>Телосложение</td>
+            <td class='td '><select name="abil_score" id="abil_score" [(ngModel)]='raw.con ' (change)='calcConChange()'>
+                <option *ngFor = 'let num of startAttr '[ngValue]='num '>{{num}}</option>
+              </select>
+            </td>
+            <td class='td '>{{raceBonus.con}}</td>
+            <td class='td '>{{total.con}}</td>
+            <td class='td '>{{mods.con}}</td>
+            <td class='td '>{{points.con}}</td>
+        </tr>
+        <tr>
+            <td class='td '>Интелект</td>
+            <td class='td '><select name="abil_score" id="abil_score" [(ngModel)]='raw.int ' (change)='calcIntChange()'>
+                <option *ngFor = 'let num of startAttr '[ngValue]='num '>{{num}}</option>
+              </select>
+            </td>
+            <td class='td '>{{raceBonus.int}}</td>
+            <td class='td '>{{total.int}}</td>
+            <td class='td '>{{mods.int}}</td>
+            <td class='td '>{{points.int}}</td>
+        </tr>
+        <tr>
+            <td class='td '>Мудрость</td>
+            <td class='td '><select name="abil_score" id="abil_score" [(ngModel)]='raw.wis ' (change)='calcWisChange()'>
+                <option *ngFor = 'let num of startAttr '[ngValue]='num '>{{num}}</option>
+              </select>
+            </td>
+            <td class='td '>{{raceBonus.wis}}</td>
+            <td class='td '>{{total.wis}}</td>
+            <td class='td '>{{mods.wis}}</td>
+            <td class='td '>{{points.wis}}</td>
+        </tr>
+        <tr>
+            <td class='td '>Харизма</td>
+            <td class='td '><select name="abil_score" id="abil_score" [(ngModel)]='raw.cha ' (change)='calcChaChange()'>
+                <option *ngFor = 'let num of startAttr '[ngValue]='num '>{{num}}</option>
+              </select>
+            </td>
+            <td class='td '>{{raceBonus.cha}}</td>
+            <td class='td '>{{total.cha}}</td>
+            <td class='td '>{{mods.cha}}</td>
+            <td class='td '>{{points.cha}}</td>
+        </tr>
+        <tr>
+            <td class='tr '>Всего очков потрачено: {{spendPoints}} / {{totalPoints}}</td>
+        </tr>
+    </table>
+</div>
